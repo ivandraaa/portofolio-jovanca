@@ -336,3 +336,150 @@ body {
   background-color: #4676fd;
   color: white;
 }
+
+/* ============ SKILLS SECTION ============ */
+.skills-section {
+  padding-top: 50px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.skills-title h2 {
+  font-size: 1.8rem;
+  color: #4676fd;
+  font-weight: 700;
+  position: relative;
+  margin: 0 auto;
+}
+
+.skills-title h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #4676fd;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* ============ CONTENT ============ */
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  padding: 0 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT SIDE: TEXT + BARS */
+.skills-info {
+  flex: 1 1 500px;
+}
+
+.skills-heading {
+  font-size: 1.5rem;
+  color: #0f1123;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.skills-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Skill Bar Layout */
+.skill-bar {
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 -2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center; /* Bikin icon dan teks sejajar tengah */
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.skill-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.skill-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.skill-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.skill-label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0f1123;
+}
+
+.skill-percentage {
+  font-weight: 600;
+  color: #0f1123;
+  white-space: nowrap;
+}
+
+.progress-bar {
+  margin-top: 0.6rem;
+  background-color: #e5e5f7;
+  border-radius: 10px;
+  height: 6px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4676fd;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* RIGHT SIDE: IMAGE */
+.skills-image {
+  flex: 1 1 400px;
+  max-width: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* penting: agar gambar cover tanpa distorsi */
+  display: block;
+}
