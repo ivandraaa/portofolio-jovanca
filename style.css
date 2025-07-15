@@ -704,3 +704,142 @@ body {
     flex: 1 1 100%;
   }
 }
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-image {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .skills-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .contact-form {
+    padding: 0 1rem;
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-outline {
+    min-width: unset;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text .description {
+    font-size: 1rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .skills-heading {
+    text-align: center;
+  }
+
+  .skills-image {
+    width: 100%;
+  }
+
+  .skill-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-left {
+    justify-content: flex-start;
+  }
+
+  .portfolio-info h3 {
+    font-size: 1rem;
+  }
+
+  .contact-form .row {
+    flex-direction: column;
+  }
+
+  .contact-form .form-group {
+    flex: 1 1 100%;
+  }
+
+  .contact-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-title h2,
+  .skills-title h2,
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-circle {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+/* Extra small (<= 480px) */
+@media (max-width: 480px) {
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text .description {
+    font-size: 0.95rem;
+  }
+
+  .skill-label {
+    font-size: 0.9rem;
+  }
+
+  .portfolio-item img {
+    height: 160px;
+  }
+
+  .contact-form .btn-primary {
+    width: 100%;
+  }
+}
