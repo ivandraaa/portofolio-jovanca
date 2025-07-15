@@ -15,14 +15,14 @@
     <!-- ========== NAVIGATION BAR ========== -->
     <header class="header">
       <div class="container">
-        <h1 class="logo">Jovanca</h1>
+        <h1 class="logo">Jovanca Carmen Angellica</h1>
         <nav class="navbar">
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">Tentang Saya</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#work">Portofolio</a></li>
+            <li><a href="#contact">Kontak</a></li>
           </ul>
         </nav>
       </div>
@@ -101,9 +101,10 @@
           <div class="skills-info">
             <h3 class="skills-heading">Profesional Skills</h3>
             <p class="skills-description">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-              optio id vero amet, alias architecto consectetur error eum eaque
-              sit.
+              Saya memiliki keterampilan teknis di bidang pengembangan web yang
+              mencakup beberapa teknologi inti yang digunakan dalam membangun
+              tampilan yang menarik. Berikut adalah daftar keahlian saya beserta
+              tingkat penguasaan:
             </p>
 
             <!-- SKILL BAR ITEM -->
@@ -155,6 +156,138 @@
       </div>
     </section>
 
+    <!-- ============ PORTOFOLIO =========== -->
+    <section class="portfolio-section" id="work">
+      <div class="portfolio-container">
+        <!-- TITLE -->
+        <div class="section-title">
+          <h2>Portofolio</h2>
+          <div class="underline"></div>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img src="skill.jpg" alt="Project 1" />
+            <div class="portfolio-info">
+              <h3>UX Wireframe Design</h3>
+              <p>
+                Wireframe untuk aplikasi mobile dengan fokus pada alur pengguna
+                dan struktur layout yang efisien.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <img src="skill.jpg" alt="Project 2" />
+            <div class="portfolio-info">
+              <h3>Clean Admin Dashboard</h3>
+              <p>
+                Desain UI/UX dashboard admin berbasis web dengan tampilan
+                minimalis dan intuitif.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <img src="skill.jpg" alt="Project 3" />
+            <div class="portfolio-info">
+              <h3>Freelancer Landing Page</h3>
+              <p>
+                Landing page responsive untuk freelancer dengan CTA dan form
+                kontak terintegrasi.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <img src="skill.jpg" alt="Project 4" />
+            <div class="portfolio-info">
+              <h3>Photography Workspace</h3>
+              <p>
+                Halaman website portfolio fotografer dengan galeri yang clean
+                dan elegan.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <img src="skill.jpg" alt="Project 5" />
+            <div class="portfolio-info">
+              <h3>E-commerce Product Page</h3>
+              <p>
+                Desain halaman produk untuk toko online dengan fokus pada detail
+                produk dan tombol beli.
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio-item">
+            <img src="skill.jpg" alt="Project 6" />
+            <div class="portfolio-info">
+              <h3>Notebook Productivity</h3>
+              <p>
+                Tampilan clean workspace untuk aplikasi catatan dengan integrasi
+                to-do list.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HUBUNGI SAYA SECTION ========== -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-title">
+          <h2>Hubungi Saya</h2>
+          <p>
+            Untuk kebutuhan desain, pengembangan, atau kolaborasi, silakan isi
+            form di bawah ini.
+          </p>
+        </div>
+
+        <form class="contact-form" onsubmit="return showSuccessAlert()">
+          <!-- 3 Kolom -->
+          <div class="row">
+            <div class="form-group">
+              <label>Nama <span style="color: red">*</span></label>
+              <input type="text" required placeholder="Masukkan nama" />
+            </div>
+            <div class="form-group">
+              <label>Email <span style="color: red">*</span></label>
+              <input type="email" required placeholder="Masukkan email" />
+            </div>
+            <div class="form-group">
+              <label>Telepon <span style="color: red">*</span></label>
+              <input type="text" required placeholder="Masukkan no. telepon" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <label>Perusahaan</label>
+              <input type="text" placeholder="Nama perusahaan" />
+            </div>
+            <div class="form-group">
+              <label>Website</label>
+              <input type="url" placeholder="URL Website" />
+            </div>
+            <div class="form-group">
+              <label>Subjek <span style="color: red">*</span></label>
+              <input type="text" required placeholder="Judul pesan" />
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label>Pesan Anda <span style="color: red">*</span></label>
+            <textarea rows="5" required placeholder="Tulis pesan..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Kirim</button>
+        </form>
+      </div>
+    </section>
+
     <!-- ========== JAVASCRIPT ========== -->
     <script>
       // ===== Smooth Scroll on Anchor Click =====
@@ -171,7 +304,7 @@
       const sections = document.querySelectorAll("section[id]");
       const navLinks = document.querySelectorAll(".navbar a");
 
-      window.addEventListener("scroll", () => {
+      function updateActiveLink() {
         let current = "";
         const scrollY = window.scrollY;
 
@@ -190,14 +323,23 @@
             link.classList.add("active");
           }
         });
-      });
+      }
 
-      // ===== Set Default Active on Page Load =====
+      // Trigger saat scroll
+      window.addEventListener("scroll", updateActiveLink);
+
+      // Trigger saat reload
+      window.addEventListener("load", updateActiveLink);
       window.addEventListener("DOMContentLoaded", () => {
         document
           .querySelector('.navbar a[href="#home"]')
           ?.classList.add("active");
       });
+
+      function showSuccessAlert() {
+        alert("Berhasil mengirim pesan!");
+        return false; // Mencegah reload halaman (untuk simulasi)
+      }
     </script>
   </body>
 </html>

@@ -483,3 +483,224 @@ body {
   object-fit: cover; /* penting: agar gambar cover tanpa distorsi */
   display: block;
 }
+
+/* ============ PORTOFOLIO SECTION ============ */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.section-title h2 {
+  font-size: 1.8rem;
+  color: #4676fd;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.section-title .underline {
+  width: 60px;
+  height: 3px;
+  background-color: #4676fd;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.portfolio-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.portfolio-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-info {
+  padding: 1rem;
+}
+
+.portfolio-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0f1123;
+}
+
+.portfolio-info p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact-section {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  scroll-margin-top: 10px;
+  min-height: 80vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-title h2 {
+  font-size: 1.8rem;
+  color: #4676fd;
+  font-weight: 700;
+  position: relative;
+  margin: 0 auto;
+}
+
+.contact-title h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #4676fd;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.contact-title p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #0f1123;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4676fd;
+  box-shadow: 0 0 0 3px rgba(70, 118, 253, 0.2);
+  outline: none;
+}
+
+.contact-form .btn-primary {
+  align-self: flex-start;
+  background-color: #4676fd;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #345de6;
+}
+
+.contact-title h2 {
+  font-size: 1.8rem;
+  color: #4676fd;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.contact-title h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 3px;
+  width: 100%;
+  background-color: #4676fd;
+  border-radius: 2px;
+}
+
+.contact-form .row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.contact-form .form-group {
+  flex: 1 1 calc(33.333% - 1rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .full-width {
+  flex: 1 1 100%;
+}
+
+@media (max-width: 768px) {
+  .contact-form .form-group {
+    flex: 1 1 100%;
+  }
+}
